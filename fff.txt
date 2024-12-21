@@ -1,0 +1,55 @@
+#!/bin/bash
+
+mkdir Git_final_test
+cd Git_final_test
+git init
+
+git checkout -b main
+touch README.md
+git add README.md
+git commit -m "add: prototype version"
+
+git checkout -b create_UI_UX
+touch UI_UX.txt
+git add UI_UX.txt
+git commit -m "add: mainmenu, inventory, settings, credits, leaderboard"
+
+git checkout -b enhance_gameplay main
+touch gameplay.txt
+git add gameplay.txt
+git commit -m "add: assign gameplay-art"
+
+git checkout main
+touch game_base.txt
+git add game_base.txt
+git commit -m "add: base game"
+touch music.txt
+git add music.txt
+git commit -m "add: music and sound effect in gameplay"
+touch bug001.txt
+git add bug001.txt
+git commit -m "fix: bug001"
+
+git checkout -b intergrate_ads_service
+touch ads.txt
+git add ads.txt
+git commit -m "add: integrate Google Admob"
+touch bug002.txt
+git add bug002.txt
+git commit -m "fix: bug002"
+touch max_applovin.txt
+git add max_applovin.txt
+git commit -m "modify: integrate MAX Applovin service"
+touch bug003.txt
+git add bug003.txt
+git commit -m "fix: bug003"
+
+git checkout -b new_feature_branch
+touch new_feature.txt
+git add new_feature.txt
+git commit -m "add: new feature"
+
+git checkout main
+git merge create_UI_UX
+git merge enhance_gameplay
+git merge intergrate_ads_service
